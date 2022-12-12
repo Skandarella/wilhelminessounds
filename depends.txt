@@ -1,0 +1,7 @@
+default
+ambience
+livingfloatlands?
+livingdesert?
+livingjungle?
+livingcaves?
+naturalbiomes?
