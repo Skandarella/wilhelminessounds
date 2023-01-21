@@ -294,5 +294,24 @@ if (def.tod < 0.2 or def.tod > 0.8) and c > 5 then
 	end
 })
 
+ambience.add_set("naturalbiomes_bushland_night", {
+	frequency = 60,
+	nodes = {"naturalbiomes:bushland_bushlandlitter"},
+	sounds = {
+		{name = "wilhelminessounds_cricket2", length = 17, ephemeral = true},
+		{name = "wilhelminessounds_cricket", length = 48, ephemeral = true},
+		{name = "wilhelminessounds_owl", length = 8, ephemeral = true},
+		{name = "wilhelminessounds_nighttime", length = 21, ephemeral = true},
+	},
+nodes = {"naturalbiomes:bushland_bushlandlitter"},
 
+	sound_check = function(def)
+
+		local c = (def.totals["naturalbiomes:bushland_bushlandlitter"] or 0)
+
+if (def.tod < 0.2 or def.tod > 0.8) and c > 5 then
+			return "naturalbiomes_bushland_night"
+		end
+	end
+})
 
